@@ -15,8 +15,3 @@ It includes features like product management, inventory tracking, billing, and s
 - **CSS3**  
 - **JavaScript (Vanilla)**  
 
-## 📂 Installation & Usage  
-1. Clone the repository:  
-   ```bash
-   git clone https://github.com/your-username/supermarket-admin.git
-
