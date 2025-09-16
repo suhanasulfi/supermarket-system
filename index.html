@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Supermarket Administration System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Supermarket Administration System</h1>
+  </header>
+
+  <!-- Product Entry Section -->
+  <section class="card">
+    <h2>Add Product</h2>
+    <input type="text" id="productName" placeholder="Product Name" />
+    <input type="number" id="productPrice" placeholder="Price" />
+    <button onclick="addProduct()">Add Product</button>
+    <button class="secondary" onclick="clearInventory()">Clear Inventory</button>
+  </section>
+
+  <!-- Inventory Display -->
+  <section class="card">
+    <h2>Inventory</h2>
+    <input type="text" id="inventorySearch" placeholder="Search Inventory..." onkeyup="filterInventory()" />
+    <table id="inventoryTable">
+      <thead>
+        <tr><th>Name</th><th>Price</th><th>Action</th></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </section>
+
+  <!-- Billing Section -->
+  <section class="card">
+    <h2>Billing</h2>
+    <input type="text" id="searchItem" placeholder="Search Product" />
+    <input type="number" id="quantity" placeholder="Quantity" min="1" value="1" />
+    <input type="number" id="discount" placeholder="Discount (%)" min="0" value="0" />
+    <button onclick="addToBill()">Add to Bill</button>
+    <button class="secondary" onclick="clearBill()">Clear Bill</button>
+    <p id="billDate"></p>
+    <table id="billTable">
+      <thead>
+        <tr><th>Name</th><th>Qty</th><th>Price</th></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <p>Total: <span id="totalAmount">0</span></p>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
